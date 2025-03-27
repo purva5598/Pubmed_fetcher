@@ -5,20 +5,19 @@ description = "A tool to fetch PubMed papers with industry affiliations"
 authors = ["Your Name <your.email@example.com>"]
 readme = "README.md"
 
+# Packages should be defined like this (no separate [tool.poetry.packages] section)
+packages = [
+    { include = "pubmed_fetcher" }
+]
+
 [tool.poetry.dependencies]
 python = "^3.8"
 biopython = "^1.81"
 typing-extensions = "^4.5.0"
-
-# Add this section:
-[tool.poetry.packages]
-include = [
-    { include = "pubmed_fetcher", from = "." }
-]
 
 [tool.poetry.scripts]
 get-papers-list = "pubmed_fetcher.cli:main"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
-build-backend = "poetry
+build-backend = "poetry.core.masonry.api"
