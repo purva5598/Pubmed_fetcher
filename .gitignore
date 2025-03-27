@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.so
+.Python
+build/
+dist/
+venv/
+.venv/
+env/
+
+# Environment
+.env
+.vscode/
+
+# Poetry
+poetry.lock
+
+# Output files
+results.csv
+*.csv
